@@ -1,6 +1,7 @@
 import { SignedOut } from "@clerk/clerk-react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { SignedIn, UserButton } from "@clerk/clerk-react";
+import './header.css'
 
 const Header = () => {
   const navigate = useNavigate();
@@ -22,6 +23,10 @@ const Header = () => {
       <SignedIn>
         <UserButton />
       </SignedIn>
+      <nav>
+        <NavLink to={'/'}>Home</NavLink>
+        <NavLink to={'/movies'}>Movies</NavLink>
+      </nav>
     </header>
   );
 };

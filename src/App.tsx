@@ -6,6 +6,7 @@ import Homepage from "./components/homepage/Homepage";
 import NotFoundPage from "./components/notFound/NotFoundPage";
 import Layout from "./components/layout/Layout";
 import MovieSearch from "./components/movies/MovieSearch";
+import WatchMovie from "./components/movies/WatchMovie";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path="/sign-in" element={<SignInPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/movies" element={<MovieSearch />} />
-        <Route path="/*" element={<NotFoundPage />} />
+        <Route path="/watch/:movieId" element={<WatchMovie />} />
+        <Route path="*" element={<NotFoundPage />} />
         {/* Other routes */}
       </Routes>
     </>
